@@ -13,13 +13,19 @@ from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 
 
 
+from subprocess import Popen
+
+
+
+
 def disable_event():
    pass
 ASSETS_PATH = Path(r"assets\frame2")
 
 def kclose():
-    os.system("main.exe")
-    foto.destroy
+    foto.destroy()
+    Popen("main.exe")
+  
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
 
