@@ -27,7 +27,7 @@ APPDATA = os.environ.get("USERPROFILE")
 GIT_PATH = APPDATA
 PATH = Path(APPDATA)/r"KELLY\KELLY"
 APPDATA = Path(APPDATA)/r"Lol"
-RESTART = Path(APPDATA)/r"Lol\Apk\main.exe"
+RESTART = Path(APPDATA)/r"Apk\main.exe"
 print(str(APPDATA))
 print(f"rmdir {str(APPDATA)}")
 os.system(f"rmdir /s /q {str(APPDATA)}")
