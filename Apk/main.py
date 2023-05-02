@@ -209,6 +209,7 @@ def keypad():
     )
     window.resizable(False, False)
     window.protocol("WM_DELETE_WINDOW", disable_event)
+    window.wm_attributes('-toolwindow', 'True')
     window.mainloop()
     print("quitting")
 
@@ -337,6 +338,8 @@ def menu():
         height=52.0
     )
     menu.resizable(False, False)
+    menu.wm_attributes('-toolwindow', 'True')
+    
     menu.protocol("WM_DELETE_WINDOW", disable_event)
     menu.mainloop()
 
