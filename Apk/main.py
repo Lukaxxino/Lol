@@ -11,14 +11,28 @@ from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 import os
 import tkinter as tk
 import time
+from subprocess import Popen
 def disable_event():
     pass
 alph = ''
 def keypad():
     #keypad
     print("Startuju keypad")
+    
+    f = open("HOWTOCLOSE.txt", "a")
+    
+    ESSEY = "TO CLOSE THIS PROGRAM YOU HAVE TO SOLVE THIS SIMPLE MATHEMATICAL EQASION\nYOU MUST TAKE THE WORD (KELLY) AND SOMEHOW TURN THE WORD INTO NUMBERS BE AWERE OF THE PHRASE\n(MODERN ENGLISH WRITING SYSTEM). YOU MUST ADD THOSE NUMBERS TOGHEDER. NOW YOU CAN MULTIPLY\nTHOSE NUMBERS WITH THE BEST NUMBER TO THE POWER OF TWO PLUS ONE AND YOU SHALL PROCEED\nPS IF YOU HAVE NO IDEA WHAT SHOULD YOU DO. YOU CAN GO TO THE WEBSITE UNDER\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.dcode.fr/letter-number-cipher"
+
+    f.write(str(ESSEY))
+    f.close()
+    PPNN =(str(os.environ.get('USERPROFILE')/Path(r'Lol\Apk\HOWTOCLOSE.txt')))
+    Popen(f"notepad.exe {PPNN}")
+    #Popen(r"notepad.exe C:\Users\lukax\OneDrive\Dokumenty\0\0.4.0\Apk\HOWTOCLOSE.txt")
+    time.sleep(2)
+    os.system("del HOWTOCLOSE.txt")
     window = Tk()
     print("keypad")
+
     
     OUTPUT_PATH = Path(__file__).parent
     print()
@@ -36,9 +50,9 @@ def keypad():
         i = str(i)
         alph = alph + i
         print(alph)
-        if i == "5":
+        if i == "3":
             alph = ""
-        if alph == '8241':
+        if alph == '4225':
             window.destroy()
 
     
